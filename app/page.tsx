@@ -49,7 +49,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen bg-[var(--brand-bg)] flex flex-col items-center justify-start font-[Prompt] p-4 sm:p-6 text-white">
+    <div className="min-h-screen bg-[var(--brand-bg)] flex flex-col items-center justify-start p-4 sm:p-6 text-white" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif' }}>
       {/* PROMO HERO */}
       <section className="w-full max-w-3xl mt-6">
         <div className="relative overflow-hidden rounded-2xl border border-[var(--brand-border)]/70 shadow-md bg-[var(--brand-surface)]">
@@ -111,7 +111,16 @@ export default function ContactForm() {
       >
         {/* LOGO */}
         <div className="flex justify-center mb-1 -mt-2">
-          <Image src="/logo.png" alt="SP Logo" width={160} height={160} className="object-contain" priority />
+          <Image 
+            src="/logo.png" 
+            alt="SP Logo" 
+            width={160} 
+            height={160} 
+            className="object-contain" 
+            priority 
+            sizes="160px"
+            style={{ width: '160px', height: '160px' }}
+          />
         </div>
 
         {/* Heading */}

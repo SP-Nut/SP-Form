@@ -1,23 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL('https://sp-form-eosin.vercel.app'),
-  title: "SP KANSARD - แบบฟอร์มรับโปรโมชัน | กันสาดรถยนต์ ส่วนลดสูงสุด 5%",
-  description: "🔥 โปรโมชันพิเศษ! กรอกฟอร์มรับสิทธิ์ส่วนลดสูงสุด 5% + ของแถมฟรี 3 รายการ: แฟลซซิ่ง, เพลทกันสนิม, ขาแขวน พร้อมส่วนลดรางน้ำอลูมิเนียม 50% จาก SP KANSARD ผู้เชี่ยวชาญกันสาดรถยนต์",
-  keywords: ["กันสาดรถยนต์", "SP KANSARD", "โปรโมชัน", "ส่วนลด", "แฟลซซิ่ง", "เพลทกันสนิม", "ขาแขวน", "รางน้ำอลูมิเนียม"],
+  title: "SP KANSARD - แบบฟอร์มรับโปรโมชัน | กันสาด ส่วนลดสูงสุด 5%",
+  description: "🔥 โปรโมชันพิเศษ! กรอกฟอร์มรับสิทธิ์ส่วนลดสูงสุด 5% + ของแถมฟรี 3 รายการ: แฟลซซิ่ง, เพลทกันสนิม, ขาแขวน พร้อมส่วนลดรางน้ำอลูมิเนียม 50% จาก SP KANSARD ผู้เชี่ยวชาญกันสาด",
+  keywords: ["กันสาด", "SP KANSARD", "โปรโมชัน", "ส่วนลด", "แฟลซซิ่ง", "เพลทกันสนิม", "ขาแขวน", "รางน้ำอลูมิเนียม"],
   authors: [{ name: "SP KANSARD" }],
   icons: {
     icon: [
@@ -45,14 +34,14 @@ export const metadata: Metadata = {
     ]
   },
   openGraph: {
-    title: "🔥 SP KANSARD - รับโปรโมชันกันสาดรถยนต์",
+    title: "🔥 SP KANSARD - รับโปรโมชันกันสาด",
     description: "⚡ กรอกฟอร์มตอนนี้ รับสิทธิ์ส่วนลดสูงสุด 5% + ของแถมฟรี 3 รายการ\n🎁 แฟลซซิ่งต่อผนัง • เพลทกันสนิม • ขาแขวน\n🔥 พิเศษ! รางน้ำอลูมิเนียม -50%",
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "SP KANSARD - โปรโมชันกันสาดรถยนต์"
+        alt: "SP KANSARD - โปรโมชันกันสาด"
       }
     ],
     type: "website",
@@ -61,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "🔥 SP KANSARD - รับโปรโมชันกันสาดรถยนต์",
+    title: "🔥 SP KANSARD - รับโปรโมชันกันสาด",
     description: "⚡ กรอกฟอร์มรับสิทธิ์ส่วนลดสูงสุด 5% + ของแถมฟรี 3 รายการ 🎁 พิเศษ! รางน้ำอลูมิเนียม -50%",
     images: ["/logo.png"],
     creator: "@SP_KANSARD",
@@ -85,6 +74,12 @@ export default function RootLayout({
     <html lang="th">
       <head>
         <link rel="canonical" href="https://sp-form-eosin.vercel.app/" />
+        
+        {/* Performance optimizations */}
+        <link rel="preconnect" href="https://vercel.live" />
+        <link rel="dns-prefetch" href="//vercel.live" />
+        
+        {/* Icons */}
         <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -93,13 +88,13 @@ export default function RootLayout({
         <meta name="theme-color" content="#06b6ff" />
         
         {/* Force cache refresh with multiple meta variations */}
-        <meta property="og:title" content="🔥 SP KANSARD - รับโปรโมชันกันสาดรถยนต์" />
+        <meta property="og:title" content="🔥 SP KANSARD - รับโปรโมชันกันสาด" />
         <meta property="og:description" content="⚡ กรอกฟอร์มตอนนี้ รับสิทธิ์ส่วนลดสูงสุด 5% + ของแถมฟรี 3 รายการ 🎁 แฟลซซิ่งต่อผนัง • เพลทกันสนิม • ขาแขวน 🔥 พิเศษ! รางน้ำอลูมิเนียม -50%" />
         <meta property="og:image" content="https://sp-form-eosin.vercel.app/logo.png" />
         <meta property="og:image:secure_url" content="https://sp-form-eosin.vercel.app/logo.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="SP KANSARD โปรโมชันกันสาดรถยนต์" />
+        <meta property="og:image:alt" content="SP KANSARD โปรโมชันกันสาด" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="SP KANSARD" />
         <meta property="og:locale" content="th_TH" />
@@ -108,7 +103,7 @@ export default function RootLayout({
         
         {/* Twitter meta tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="🔥 SP KANSARD - รับโปรโมชันกันสาดรถยนต์" />
+        <meta name="twitter:title" content="🔥 SP KANSARD - รับโปรโมชันกันสาด" />
         <meta name="twitter:description" content="⚡ กรอกฟอร์มรับสิทธิ์ส่วนลดสูงสุด 5% + ของแถมฟรี 3 รายการ 🎁 พิเศษ! รางน้ำอลูมิเนียม -50%" />
         <meta name="twitter:image" content="https://sp-form-eosin.vercel.app/logo.png" />
         <meta name="twitter:site" content="@SP_KANSARD" />
@@ -118,7 +113,7 @@ export default function RootLayout({
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="antialiased"
       >
         {children}
         <Analytics />
