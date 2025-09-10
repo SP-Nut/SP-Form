@@ -1,0 +1,31 @@
+{
+  "name": "SP KANSARD - กันสาดรถยนต์",
+  "short_name": "SP KANSARD",
+  "description": "แบบฟอร์มรับโปรโมชันกันสาดรถยนต์ SP KANSARD",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1660",
+  "theme_color": "#06b6ff",
+  "icons": [
+    {
+      "src": "/icon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-32x32.png", 
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "192x192", 
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

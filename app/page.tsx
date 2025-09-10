@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,7 +41,7 @@ export default function ContactForm() {
       } else {
         setSubmitMessage('❌ ' + result.message);
       }
-    } catch (error) {
+    } catch {
       setSubmitMessage('❌ เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง');
     } finally {
       setIsSubmitting(false);
@@ -110,7 +111,7 @@ export default function ContactForm() {
       >
         {/* LOGO */}
         <div className="flex justify-center mb-1 -mt-2">
-          <img src="/logo.png" alt="SP Logo" className="w-40 h-40 object-contain" />
+          <Image src="/logo.png" alt="SP Logo" width={160} height={160} className="object-contain" priority />
         </div>
 
         {/* Heading */}
