@@ -134,7 +134,7 @@ export default function ContactForm() {
               name="firstName"
               type="text"
               required
-              placeholder="เช่น อานัส"
+              placeholder="เช่น เอสพี"
               className="w-full bg-[#0e2d4d] border border-[var(--brand-border)] rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[var(--brand-blue)] focus:border-[var(--brand-blue)] text-white placeholder-gray-500"
             />
           </div>
@@ -146,7 +146,7 @@ export default function ContactForm() {
               id="lastName"
               name="lastName"
               type="text"
-              placeholder="เช่น เอามิง"
+              placeholder="เช่น กันสาด"
               className="w-full bg-[#0e2d4d] border border-[var(--brand-border)] rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[var(--brand-blue)] focus:border-[var(--brand-blue)] text-white placeholder-gray-500"
             />
           </div>
