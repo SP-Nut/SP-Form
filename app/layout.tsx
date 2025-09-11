@@ -6,7 +6,8 @@ import { Prompt } from 'next/font/google';
 const prompt = Prompt({
   subsets: ['latin', 'thai'],
   weight: ['400','500','600','700','800'],
-  display: 'swap'
+  display: 'swap',
+  variable: '--font-prompt'
 });
 
 export const metadata: Metadata = {
@@ -120,7 +121,7 @@ export default function RootLayout({
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       </head>
       <body
-        className={`${prompt.className} antialiased overflow-x-hidden`}
+        className={`${prompt.className} ${prompt.variable} antialiased overflow-x-hidden`}
       >
         {children}
         <Analytics />

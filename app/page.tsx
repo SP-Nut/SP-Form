@@ -48,8 +48,7 @@ export default function ContactForm() {
 
   return (
     <div
-  className="min-h-screen relative flex flex-col items-center justify-start px-3 sm:px-6 pt-1 sm:py-8 pb-[env(safe-area-inset-bottom)] w-full max-w-full overflow-x-hidden"
-      style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}
+      className="min-h-screen relative flex flex-col items-center justify-start px-3 sm:px-6 pt-1 sm:py-8 pb-[env(safe-area-inset-bottom)] w-full max-w-full overflow-x-hidden"
     >
       {/* --- LIGHT THEME BACKDROP (ตามเรฟภาพ) --- */}
       <div
