@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { Prompt } from 'next/font/google';
+
+const prompt = Prompt({
+  subsets: ['latin', 'thai'],
+  weight: ['400','500','600','700','800'],
+  display: 'swap'
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sp-form-eosin.vercel.app'),
@@ -71,7 +78,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="th">
+  <html lang="th" className="overflow-x-hidden">
       <head>
         <link rel="canonical" href="https://sp-form-eosin.vercel.app/" />
         
@@ -113,7 +120,7 @@ export default function RootLayout({
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       </head>
       <body
-        className="antialiased"
+        className={`${prompt.className} antialiased overflow-x-hidden`}
       >
         {children}
         <Analytics />
