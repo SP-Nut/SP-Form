@@ -62,7 +62,7 @@ export default function ContactForm() {
   <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 opacity-80 overflow-hidden">
         <div className="absolute -top-24 -left-20 h-[40rem] w-[40rem] blur-3xl"
           style={{
-            background: 'radial-gradient(55% 55% at 50% 50%, #2EE66F 0%, rgba(46,230,111,0) 60%)'
+            background: 'radial-gradient(55% 55% at 50% 50%, #FF69B4 0%, rgba(255,105,180,0) 60%)'
           }} />
         <div className="absolute -top-16 right-[-8rem] h-[42rem] w-[42rem] blur-3xl"
           style={{
@@ -109,9 +109,9 @@ export default function ContactForm() {
               <strong className="text-[#30318B]">ของแถมฟรี 3 รายการ</strong>
               <span className="hidden sm:inline"> : </span>
               <span className="sm:hidden block text-[0.85rem] tracking-wide text-slate-500 mt-0.5">แฟลซซิ่ง • เพลท • ขาแขวน</span>
-              <span className="hidden sm:inline">แฟลซซิ่ง • เพลท • ขาแขวน</span>
+              <span className="hidden sm:inline">แฟลชชิ่ง • เหล็กเพลท • แขนค้ำ</span>
             </p>
-            <p className="text-pink-600 font-semibold sm:inline-block sm:ml-1">ส่วนลดรางน้ำอลูมิเนียม 50%</p>
+          
           </div>
 
           {/* Benefit & Promo chips (mobile) – optimized unique items, no scroll */}
@@ -126,16 +126,16 @@ export default function ContactForm() {
             </ul>
           </div>
           <ul className="hidden sm:flex flex-row flex-wrap justify-center gap-x-10 gap-y-1.5 mb-5 sm:mb-6 max-w-5xl mx-auto text-slate-700 text-[0.82rem] sm:text-base font-medium tracking-normal">
-            <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-[#30318B]" />ของแถมครบ 3 รายการ</li>
+            
             <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-[#30318B]" />ติดตั้งเร็ว ภายใน 1 วัน*</li>
             <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-[#30318B]" />ปรึกษาช่างมืออาชีพ</li>
-            <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-[#30318B]" />ลดเพิ่มงานติดตั้งสูงสุด 5%</li>
+            <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-[#30318B]" />รับประกันงานติดตั้งสูงสุด 5 ปี</li>
           </ul>
 
           {/* (Removed separate mobile promo scroll section; merged above) */}
           <div className="hidden sm:flex mt-1 flex-wrap justify-center gap-x-5 gap-y-1.5 text-[0.78rem] sm:text-sm font-semibold text-slate-700 mb-1">
             <span className="text-[#30318B]">ลดติดตั้งสูงสุด 5%</span>
-            <span className="text-pink-600">รางน้ำ -50%</span>
+            <span className="text-pink-600">ส่วนลดรางน้ำ 50%</span>
             <span className="text-slate-600">แถม 3 รายการ</span>
           </div>
         </div>
@@ -198,7 +198,7 @@ export default function ContactForm() {
           {/* Inline Promo */}
           <div className="w-full text-center">
             <span className="inline-flex items-center gap-2 text-[#30318B] font-semibold text-sm">
-              🎁 รับฟรี แฟลซซิ่ง + เพลท + ขาแขวน เมื่อกรอกฟอร์มนี้
+              🎁 รับฟรี แฟลซซิ่ง + เหล็กเพลท + แขนค้ำ เมื่อกรอกฟอร์มนี้
             </span>
           </div>
 
