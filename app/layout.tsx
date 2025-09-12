@@ -119,6 +119,48 @@ export default function RootLayout({
         {/* Additional LINE-specific meta tags */}
         <meta name="description" content="🔥 SP KANSARD โปรโมชันพิเศษ! รับส่วนลด 5% + ของแถมฟรี 3 รายการ แฟลซซิ่ง เพลทกันสนิม ขาแขวน พร้อมรางน้ำอลูมิเนียม -50%" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        
+        {/* Structured Data - Business */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "SP KANSARD",
+            "description": "ผู้เชี่ยวชาญกันสาดคุณภาพ",
+            "telephone": "084-909-7777",
+            "url": "https://sp-form-eosin.vercel.app/",
+            "logo": "https://sp-form-eosin.vercel.app/logo.png",
+            "sameAs": [
+              "https://www.facebook.com/spkansard/",
+              "https://page.line.me/biv3563x"
+            ],
+            "priceRange": "฿฿",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "150"
+            }
+          })
+        }} />
+        
+        {/* Structured Data - Promotion */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Offer",
+            "name": "โปรโมชันกันสาดพิเศษ",
+            "description": "ส่วนลดสูงสุด 5% + ของแถมฟรี 3 รายการ",
+            "price": "0",
+            "priceCurrency": "THB",
+            "validFrom": "2025-01-01",
+            "validThrough": "2025-12-31",
+            "availability": "https://schema.org/InStock",
+            "offeredBy": {
+              "@type": "Organization",
+              "name": "SP KANSARD"
+            }
+          })
+        }} />
       </head>
       <body
         className={`${prompt.className} ${prompt.variable} antialiased overflow-x-hidden`}
