@@ -59,19 +59,10 @@ export default function ContactForm() {
         "
       />
       {/* soft blobs */}
-  <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 opacity-50 sm:opacity-80 overflow-hidden">
-        <div className="absolute -top-24 -left-20 h-[40rem] w-[40rem] blur-3xl"
-          style={{
-            background: 'radial-gradient(55% 55% at 50% 50%, rgba(255,105,180,0.5) 0%, rgba(255,105,180,0) 60%)'
-          }} />
-        <div className="absolute -top-16 right-[-8rem] h-[42rem] w-[42rem] blur-3xl"
-          style={{
-            background: 'radial-gradient(55% 55% at 50% 50%, rgba(59,91,255,0.5) 0%, rgba(59,91,255,0) 60%)'
-          }} />
-        <div className="absolute top-32 right-10 h-[35rem] w-[35rem] blur-3xl"
-          style={{
-            background: 'radial-gradient(55% 55% at 50% 50%, rgba(158,123,255,0.5) 0%, rgba(158,123,255,0) 60%)'
-          }} />
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 opacity-50 sm:opacity-80 overflow-hidden">
+        <div className="absolute -top-24 -left-20 h-[40rem] w-[40rem] blur-3xl bg-gradient-radial from-pink-400/50 to-transparent" />
+        <div className="absolute -top-16 right-[-8rem] h-[42rem] w-[42rem] blur-3xl bg-gradient-radial from-blue-500/50 to-transparent" />
+        <div className="absolute top-32 right-10 h-[35rem] w-[35rem] blur-3xl bg-gradient-radial from-purple-400/50 to-transparent" />
       </div>
 
       {/* PROMO HERO - Full Width */}
@@ -93,7 +84,7 @@ export default function ContactForm() {
           {/* Ribbon */}
           <div className="inline-flex items-center gap-2 rounded-full bg-[#30318B] text-white font-semibold px-4 py-1.5 text-xs sm:text-sm shadow-sm ring-1 ring-black/5 mb-3 sm:mb-6">
             🔥 โปรโมชันพิเศษ
-            <span className="inline-block h-2 w-2 rounded-full" style={{ backgroundColor: '#FF2B8C' }} />
+            <span className="inline-block h-2 w-2 rounded-full bg-[#FF2B8C]" />
           </div>
 
           <h1 className="relative font-extrabold tracking-tight mb-2 sm:mb-4 leading-[1.22] sm:leading-snug">
@@ -108,46 +99,41 @@ export default function ContactForm() {
             <p className="mb-1 sm:mb-2">
               <strong className="text-[#30318B]">ของแถมฟรี 3 รายการ</strong>
               <span className="hidden sm:inline"> : </span>
-              <span className="sm:hidden block text-[0.85rem] tracking-wide text-black mt-0.5">แฟลซซิ่ง • เพลท • ขาแขวน</span>
-              <span className="hidden sm:inline">แฟลชชิ่ง • เหล็กเพลท • แขนค้ำ</span>
+              <span className="sm:hidden block text-[0.85rem] tracking-wide text-black mt-0.5">แฟลซซิ่ง • เพลทเหล็กกัลวาไนซ์ • ขาค้ำยัน</span>
+              <span className="hidden sm:inline">แฟลซซิ่ง • เพลทเหล็กกัลวาไนซ์ • ขาค้ำยัน</span>
             </p>
-          
           </div>
 
           {/* Benefit & Promo chips (mobile) – text format without cards */}
-  <div className="sm:hidden mb-3">
-    <p className="text-[12px] font-semibold tracking-wide text-[#30318B] mb-2">สิทธิ์ที่ได้รับ</p>
+          <div className="sm:hidden mb-3">
+            <p className="text-[12px] font-semibold tracking-wide text-[#30318B] mb-2">สิทธิ์ที่ได้รับ</p>
             <div className="text-center space-y-1" aria-label="สิทธิ์โปรโมชัน">
-              
-              <p className="text-[15px] text-pink-600 font-semibold">✓ ติดตั้งเร็ว 1 วัน</p>
-              <p className="text-[15px] text-pink-600 font-semibold">✓ ปรึกษาช่างมืออาชีพ</p>
+              <p className="text-[15px] text-pink-600 font-semibold">✓ ติดตั้งรวดเร็ว</p>
+              <p className="text-[15px] text-pink-600 font-semibold">✓ ทีมงานมืออาชีพ</p>
               <p className="text-[15px] text-pink-600 font-semibold">✓ รับส่วนลดสูงสุด 5%</p>
-                <p className="text-[15px] text-pink-600 font-semibold">✓ รับประกันงานติดตั้งสูงสุด 5 ปี</p>
-              
+              <p className="text-[15px] text-pink-600 font-semibold">✓ รับประกันงานรั่วซึมสูงสุด 5 ปี</p>
             </div>
           </div>
           <ul className="hidden sm:flex flex-row flex-wrap justify-center gap-x-10 gap-y-1.5 mb-5 sm:mb-6 max-w-5xl mx-auto text-slate-700 text-[0.82rem] sm:text-base font-medium tracking-normal">
-            <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500"  />รับส่วนลดสูงสุด 5%</li>
-            <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500"  />ติดตั้งเร็ว ภายใน 1 วัน*</li>
-            <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500"  />ปรึกษาช่างมืออาชีพ</li>
-            <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500" />รับประกันงานติดตั้งสูงสุด 5 ปี</li>
+            <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500" />รับส่วนลดสูงสุด 5%</li>
+            <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500" />ติดตั้งรวดเร็ว</li>
+            <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500" />ทีมงานมืออาชีพ</li>
+            <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500" />รับประกันงานรั่วซึมสูงสุด 5 ปี</li>
           </ul>
 
           {/* (Removed separate mobile promo scroll section; merged above) */}
-       
         </div>
+        {/* Separator between Promo and Form */}
+        <div
+          aria-hidden
+          className="w-full max-w-5xl mx-auto h-[2px] bg-gradient-to-r from-transparent via-[#30318B]/40 to-transparent mb-4 sm:mb-6"
+        />
       </section>
-
-      {/* Separator between Promo and Form */}
-      <div
-        aria-hidden
-        className="w-full max-w-5xl mx-auto h-[2px] bg-gradient-to-r from-transparent via-[#30318B]/40 to-transparent mb-4 sm:mb-6"
-      />
 
       {/* FORM */}
       <form
         onSubmit={handleSubmit}
-  className="w-full max-w-4xl mt-4 p-4 sm:p-0 sm:pt-2"
+        className="w-full max-w-4xl mt-4 p-4 sm:p-0 sm:pt-2"
       >
 
         {/* Heading */}

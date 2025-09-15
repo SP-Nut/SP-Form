@@ -61,6 +61,11 @@ body {
 .tag-pill.brand { color: #30318B; border-color: rgba(48,49,139,.35); background: rgba(48,49,139,.07); }
 .tag-pill.pink { color: #be1b77; border-color: rgba(255,43,140,.35); background: rgba(255,43,140,.08); }
 
+/* Custom utilities for performance */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-from) 0%, var(--tw-gradient-to) 60%);
+}
+
 /* Mobile white outline for special text */
 @media (max-width: 639px) {
   .mobile-text-outline {
