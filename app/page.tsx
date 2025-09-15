@@ -47,6 +47,36 @@ export default function ContactForm() {
   };
 
   return (
+    <>
+      {/* SEO Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "SP KANSARD",
+            "description": "ผู้เชี่ยวชาญติดตั้งกันสาดคุณภาพ",
+            "url": "https://sp-form-eosin.vercel.app",
+            "logo": "https://sp-form-eosin.vercel.app/logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "084-909-7777",
+              "contactType": "Customer Service",
+              "availableLanguage": "Thai"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "TH"
+            },
+            "sameAs": [
+              "https://www.facebook.com/spkansard/",
+              "https://page.line.me/biv3563x"
+            ]
+          })
+        }}
+      />
+      
     <div
       className="min-h-screen relative flex flex-col items-center justify-start px-3 sm:px-6 pt-1 sm:py-8 pb-[env(safe-area-inset-bottom)] w-full max-w-full overflow-x-hidden"
     >
@@ -72,7 +102,7 @@ export default function ContactForm() {
           <div className="absolute top-[calc(env(safe-area-inset-top)+6px)] left-1/2 -translate-x-1/2 flex justify-center pointer-events-none select-none">
             <Image
               src="/logo.png"
-              alt="SP Logo"
+              alt="SP KANSARD - ผู้เชี่ยวชาญติดตั้งกันสาดคุณภาพ บริการครบครัน"
               width={180}
               height={180}
               className="object-contain drop-shadow-sm"
@@ -87,13 +117,15 @@ export default function ContactForm() {
             <span className="inline-block h-2 w-2 rounded-full bg-[#FF2B8C]" />
           </div>
 
-          <h1 className="relative font-extrabold tracking-tight mb-2 sm:mb-4 leading-[1.22] sm:leading-snug">
-            <span className="block text-[1.3rem] text-slate-900 sm:hidden font-bold mb-1">กรอกฟอร์มตอนนี้</span>
-            <span className="hidden sm:block text-[1.9rem] sm:text-5xl lg:text-[3.4rem]">กรอกฟอร์มตอนนี้</span>
-            <span className="block text-[2.25rem] sm:text-[2.9rem] lg:text-[3.2rem] mt-0.5 bg-gradient-to-r from-[#30318B] via-[#5A56FF] to-[#FF2B8C] bg-clip-text text-transparent font-black drop-shadow-sm mobile-text-outline">
-              รับข้อเสนอสุดพิเศษ
-            </span>
-          </h1>
+          <header>
+            <h1 className="relative font-extrabold tracking-tight mb-2 sm:mb-4 leading-[1.22] sm:leading-snug">
+              <span className="block text-[1.3rem] text-slate-900 sm:hidden font-bold mb-1">กรอกฟอร์มตอนนี้</span>
+              <span className="hidden sm:block text-[1.9rem] sm:text-5xl lg:text-[3.4rem]">กรอกฟอร์มตอนนี้</span>
+              <span className="block text-[2.25rem] sm:text-[2.9rem] lg:text-[3.2rem] mt-0.5 bg-gradient-to-r from-[#30318B] via-[#5A56FF] to-[#FF2B8C] bg-clip-text text-transparent font-black drop-shadow-sm mobile-text-outline">
+                รับข้อเสนอสุดพิเศษ
+              </span>
+            </h1>
+          </header>
 
           <div className="max-w-md sm:max-w-4xl mx-auto mb-3 sm:mb-8 text-[1.05rem] sm:text-xl lg:text-2xl leading-[1.5] sm:leading-relaxed text-slate-600 font-medium">
             <p className="mb-1 sm:mb-2">
@@ -105,15 +137,16 @@ export default function ContactForm() {
           </div>
 
           {/* Benefit & Promo chips (mobile) – text format without cards */}
-          <div className="sm:hidden mb-3">
-            <p className="text-[12px] font-semibold tracking-wide text-[#30318B] mb-2">สิทธิ์ที่ได้รับ</p>
-            <div className="text-center space-y-1" aria-label="สิทธิ์โปรโมชัน">
+          <aside className="sm:hidden mb-3">
+            <h3 className="text-[12px] font-semibold tracking-wide text-[#30318B] mb-2">สิทธิ์ที่ได้รับ</h3>
+            <div className="text-center space-y-1" aria-label="สิทธิ์โปรโมชัน"
+                 itemScope itemType="https://schema.org/OfferCatalog">
               <p className="text-[15px] text-pink-600 font-semibold">✓ ติดตั้งรวดเร็ว</p>
               <p className="text-[15px] text-pink-600 font-semibold">✓ ทีมงานมืออาชีพ</p>
               <p className="text-[15px] text-pink-600 font-semibold">✓ รับส่วนลดสูงสุด 5%</p>
               <p className="text-[15px] text-pink-600 font-semibold">✓ รับประกันงานรั่วซึมสูงสุด 5 ปี</p>
             </div>
-          </div>
+          </aside>
           <ul className="hidden sm:flex flex-row flex-wrap justify-center gap-x-10 gap-y-1.5 mb-5 sm:mb-6 max-w-5xl mx-auto text-slate-700 text-[0.82rem] sm:text-base font-medium tracking-normal">
             <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500" />รับส่วนลดสูงสุด 5%</li>
             <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500" />ติดตั้งรวดเร็ว</li>
@@ -379,5 +412,6 @@ export default function ContactForm() {
         </div>
       </form>
     </div>
+    </>
   );
 }
