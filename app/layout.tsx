@@ -79,9 +79,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-  <html lang="th" className="overflow-x-hidden">
+  <html lang="th" className="overflow-x-hidden" style={{ colorScheme: 'light' }}>
       <head>
         <link rel="canonical" href="https://sp-form-eosin.vercel.app/" />
+        
+        {/* Force light mode */}
+        <meta name="color-scheme" content="light only" />
+        <meta name="supported-color-schemes" content="light" />
         
         {/* Performance optimizations */}
         <link rel="preconnect" href="https://vercel.live" />

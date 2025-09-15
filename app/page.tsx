@@ -59,18 +59,18 @@ export default function ContactForm() {
         "
       />
       {/* soft blobs */}
-  <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 opacity-80 overflow-hidden">
+  <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 opacity-50 sm:opacity-80 overflow-hidden">
         <div className="absolute -top-24 -left-20 h-[40rem] w-[40rem] blur-3xl"
           style={{
-            background: 'radial-gradient(55% 55% at 50% 50%, #FF69B4 0%, rgba(255,105,180,0) 60%)'
+            background: 'radial-gradient(55% 55% at 50% 50%, rgba(255,105,180,0.5) 0%, rgba(255,105,180,0) 60%)'
           }} />
         <div className="absolute -top-16 right-[-8rem] h-[42rem] w-[42rem] blur-3xl"
           style={{
-            background: 'radial-gradient(55% 55% at 50% 50%, #3B5BFF 0%, rgba(59,91,255,0) 60%)'
+            background: 'radial-gradient(55% 55% at 50% 50%, rgba(59,91,255,0.5) 0%, rgba(59,91,255,0) 60%)'
           }} />
         <div className="absolute top-32 right-10 h-[35rem] w-[35rem] blur-3xl"
           style={{
-            background: 'radial-gradient(55% 55% at 50% 50%, #9E7BFF 0%, rgba(158,123,255,0) 60%)'
+            background: 'radial-gradient(55% 55% at 50% 50%, rgba(158,123,255,0.5) 0%, rgba(158,123,255,0) 60%)'
           }} />
       </div>
 
@@ -99,8 +99,8 @@ export default function ContactForm() {
           <h1 className="relative font-extrabold tracking-tight mb-2 sm:mb-4 leading-[1.22] sm:leading-snug">
             <span className="block text-[1.3rem] text-slate-900 sm:hidden font-bold mb-1">กรอกฟอร์มตอนนี้</span>
             <span className="hidden sm:block text-[1.9rem] sm:text-5xl lg:text-[3.4rem]">กรอกฟอร์มตอนนี้</span>
-            <span className="block text-[2.25rem] sm:text-[2.9rem] lg:text-[3.2rem] mt-0.5 bg-gradient-to-r from-[#30318B] via-[#5A56FF] to-[#FF2B8C] bg-clip-text text-transparent font-black drop-shadow-sm">
-              รับส่วนลดสูงสุด 50%
+            <span className="block text-[2.25rem] sm:text-[2.9rem] lg:text-[3.2rem] mt-0.5 bg-gradient-to-r from-[#30318B] via-[#5A56FF] to-[#FF2B8C] bg-clip-text text-transparent font-black drop-shadow-sm mobile-text-outline">
+              รับข้อเสนอสุดพิเศษ
             </span>
           </h1>
 
@@ -108,36 +108,33 @@ export default function ContactForm() {
             <p className="mb-1 sm:mb-2">
               <strong className="text-[#30318B]">ของแถมฟรี 3 รายการ</strong>
               <span className="hidden sm:inline"> : </span>
-              <span className="sm:hidden block text-[0.85rem] tracking-wide text-slate-500 mt-0.5">แฟลซซิ่ง • เพลท • ขาแขวน</span>
+              <span className="sm:hidden block text-[0.85rem] tracking-wide text-black mt-0.5">แฟลซซิ่ง • เพลท • ขาแขวน</span>
               <span className="hidden sm:inline">แฟลชชิ่ง • เหล็กเพลท • แขนค้ำ</span>
             </p>
           
           </div>
 
-          {/* Benefit & Promo chips (mobile) – optimized unique items, no scroll */}
+          {/* Benefit & Promo chips (mobile) – text format without cards */}
   <div className="sm:hidden mb-3">
     <p className="text-[12px] font-semibold tracking-wide text-[#30318B] mb-2">สิทธิ์ที่ได้รับ</p>
-            <ul className="flex flex-wrap justify-center gap-2" aria-label="สิทธิ์โปรโมชัน">
-    <li className="tag-pill brand text-[15px]">แถมครบ 3 รายการ</li>
-    <li className="tag-pill text-[15px]">ติดตั้งเร็ว 1 วัน*</li>
-    <li className="tag-pill text-[15px]">ปรึกษาช่างมืออาชีพ</li>
-    <li className="tag-pill pink text-[15px]">ลดติดตั้ง 5%</li>
-    <li className="tag-pill pink text-[15px]">รางน้ำ -50%</li>
-            </ul>
+            <div className="text-center space-y-1" aria-label="สิทธิ์โปรโมชัน">
+              
+              <p className="text-[15px] text-pink-600 font-semibold">✓ ติดตั้งเร็ว 1 วัน</p>
+              <p className="text-[15px] text-pink-600 font-semibold">✓ ปรึกษาช่างมืออาชีพ</p>
+              <p className="text-[15px] text-pink-600 font-semibold">✓ รับส่วนลดสูงสุด 5%</p>
+                <p className="text-[15px] text-pink-600 font-semibold">✓ รับประกันงานติดตั้งสูงสุด 5 ปี</p>
+              
+            </div>
           </div>
           <ul className="hidden sm:flex flex-row flex-wrap justify-center gap-x-10 gap-y-1.5 mb-5 sm:mb-6 max-w-5xl mx-auto text-slate-700 text-[0.82rem] sm:text-base font-medium tracking-normal">
-            
-            <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-[#30318B]" />ติดตั้งเร็ว ภายใน 1 วัน*</li>
-            <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-[#30318B]" />ปรึกษาช่างมืออาชีพ</li>
-            <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-[#30318B]" />รับประกันงานติดตั้งสูงสุด 5 ปี</li>
+            <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500"  />รับส่วนลดสูงสุด 5%</li>
+            <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500"  />ติดตั้งเร็ว ภายใน 1 วัน*</li>
+            <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500"  />ปรึกษาช่างมืออาชีพ</li>
+            <li className="flex items-center gap-2 text-pink-600 font-semibold"><span className="h-1.5 w-1.5 rounded-full bg-pink-500" />รับประกันงานติดตั้งสูงสุด 5 ปี</li>
           </ul>
 
           {/* (Removed separate mobile promo scroll section; merged above) */}
-          <div className="hidden sm:flex mt-1 flex-wrap justify-center gap-x-5 gap-y-1.5 text-[0.78rem] sm:text-sm font-semibold text-slate-700 mb-1">
-            <span className="text-[#30318B]">ลดติดตั้งสูงสุด 5%</span>
-            <span className="text-pink-600">ส่วนลดรางน้ำ 50%</span>
-            <span className="text-slate-600">แถม 3 รายการ</span>
-          </div>
+       
         </div>
       </section>
 
@@ -193,13 +190,6 @@ export default function ContactForm() {
                            focus:outline-none focus:ring-4 focus:ring-[#30318B]/15 focus:border-[#30318B]/60 transition-all"
               />
             </div>
-          </div>
-
-          {/* Inline Promo */}
-          <div className="w-full text-center">
-            <span className="inline-flex items-center gap-2 text-[#30318B] font-semibold text-sm">
-              🎁 รับฟรี แฟลซซิ่ง + เหล็กเพลท + แขนค้ำ เมื่อกรอกฟอร์มนี้
-            </span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

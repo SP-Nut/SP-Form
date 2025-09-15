@@ -1,6 +1,15 @@
 
 @import "tailwindcss";
 
+/* Force light mode only */
+html {
+  color-scheme: light only;
+}
+
+* {
+  color-scheme: light;
+}
+
 /* ลบ Google Fonts เพื่อเพิ่มความเร็ว */
 /* ใช้ system fonts แทน */
 
@@ -13,19 +22,18 @@
   --brand-magenta: #ff0d84;       /* pink/magenta tag */
   --brand-surface: #0f1d3d;       /* surface panel */
   --brand-border: #1d3a70;        /* border tone */
-  --brand-bg: #060b1a;            /* page background */
+  --brand-bg: #ffffff;            /* force white background */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Force light mode - override any dark mode preferences */
+:root {
+  --background: #ffffff !important;
+  --foreground: #171717 !important;
 }
 
 body {
-  background: var(--brand-bg);
-  color: var(--foreground);
+  background: #ffffff !important;
+  color: #171717 !important;
   /* ใช้ system fonts แทน Google Fonts เพื่อความเร็ว */
   font-family: var(--font-prompt, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif);
 }
@@ -52,3 +60,10 @@ body {
 }
 .tag-pill.brand { color: #30318B; border-color: rgba(48,49,139,.35); background: rgba(48,49,139,.07); }
 .tag-pill.pink { color: #be1b77; border-color: rgba(255,43,140,.35); background: rgba(255,43,140,.08); }
+
+/* Mobile white outline for special text */
+@media (max-width: 639px) {
+  .mobile-text-outline {
+    -webkit-text-stroke: 0.5px #ffffff;
+  }
+}
